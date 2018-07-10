@@ -16,6 +16,7 @@ import 'package:flutter_action/Lession/PopupMenuComp.dart';
 import 'package:flutter_action/Lession/BottomNavigation_mini.dart';
 import 'package:flutter_action/Lession/ListItemComp.dart';
 import 'package:flutter_action/Lession/HttpRequestComp.dart';
+import 'package:flutter_action/Lession/PullRefreshComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: new ShoppingList(products: _kProducts,),//购物车列表。
+      // home: new ShoppingList(products: _kProducts,),//购物车列表。
       // home: new Counter(),//点击计数。
       // home: new CustomText(),//文字控件。
       // home:new CustomImage(),//图片控件
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
       // home:new BottomNavigation(),//底部导航控件
       // home:new CustomListView(),//列表项(有问题)
       // home: new HttpRequestComp(),//http请求
+      home:new PullRefreshComp(),
     );
   }
 
