@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:flutter_action/Lession/ShoppingList.dart';
 
 class PullRefreshComp extends StatefulWidget {
   @override
@@ -65,7 +66,6 @@ class _PullRefreshCompState extends State<PullRefreshComp> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -80,10 +80,13 @@ class _PullRefreshCompState extends State<PullRefreshComp> {
           physics: const AlwaysScrollableScrollPhysics(), //永远可以滚动。
           itemCount: items.length,
           itemBuilder: (context, index) {
-            if (index == items.length-1) {
+            if (index == items.length - 1) {
               return _buildProgressIndicator();
             } else {
-              return ListTile(title: new Text("Number $index"));
+              return new GestureDetector(
+                onTap: _onClick,
+                child: new ListTile(title: new Text("Number $index")),
+              );
             }
           },
           controller: _scrollController,
@@ -92,17 +95,30 @@ class _PullRefreshCompState extends State<PullRefreshComp> {
     );
   }
 
-    Widget _buildProgressIndicator() {
+  _onClick() {
+    setState(() {
+      Navigator
+          .of(context)
+          .push(new MaterialPageRoute(builder: (BuildContext context) {
+        return new Scaffold(
+          appBar: new AppBar(
+            title: Text("Infinite ListView"),
+          ),
+          body: new Text("Infinite ListView"),
+        );
+      }));
+    });
+  }
+
+  Widget _buildProgressIndicator() {
     return new Padding(
       padding: const EdgeInsets.all(8.0),
       child: new Center(
         child: new Opacity(
           opacity: isPerformingRequest ? 1.0 : 0.0,
-          child: new CircularProgressIndicator(
-          ),
+          child: new CircularProgressIndicator(),
         ),
       ),
     );
   }
-
 }

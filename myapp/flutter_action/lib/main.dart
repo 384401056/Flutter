@@ -17,6 +17,8 @@ import 'package:flutter_action/Lession/BottomNavigation_mini.dart';
 import 'package:flutter_action/Lession/ListItemComp.dart';
 import 'package:flutter_action/Lession/HttpRequestComp.dart';
 import 'package:flutter_action/Lession/PullRefreshComp.dart';
+import 'package:flutter_action/Lession/ImagePickerComp.dart';
+import 'package:flutter_action/Lession/BottomSheetComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -45,7 +47,9 @@ class MyApp extends StatelessWidget {
       // home:new BottomNavigation(),//底部导航控件
       // home:new CustomListView(),//列表项(有问题)
       // home: new HttpRequestComp(),//http请求
-      home:new PullRefreshComp(),
+      // home:new PullRefreshComp(),
+      // home:new ImagePickerComp(),
+      home:new BootomSheetComp(),
     );
   }
 
