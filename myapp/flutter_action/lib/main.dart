@@ -8,9 +8,17 @@ import 'package:flutter_action/Lession/LayoutRowColumn.dart';
 import 'package:flutter_action/Lession/LayoutStack.dart';
 import 'package:flutter_action/Lession/LayoutScroll.dart';
 import 'package:flutter_action/Lession/AlignComponent.dart';
-import 'package:flutter_action/TestComponents/SimpleDialogComp.dart';
-import 'package:flutter_action/TestComponents/WebViewComp.dart';
-
+import 'package:flutter_action/Lession/PaddingComp.dart';
+import 'package:flutter_action/Lession/SizeBoxComp.dart';
+import 'package:flutter_action/Lession/DecorateComp.dart';
+import 'package:flutter_action/Lession/OpacityComp.dart';
+import 'package:flutter_action/Lession/PopupMenuComp.dart';
+import 'package:flutter_action/Lession/BottomNavigation_mini.dart';
+import 'package:flutter_action/Lession/ListItemComp.dart';
+import 'package:flutter_action/Lession/HttpRequestComp.dart';
+import 'package:flutter_action/Lession/PullRefreshComp.dart';
+import 'package:flutter_action/Lession/ImagePickerComp.dart';
+import 'package:flutter_action/Lession/BottomSheetComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -20,9 +28,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
-      // routes: {
-      //   '/':(_)=>new Text("data"),
-      // },
       theme: new ThemeData(
         primarySwatch: Colors.green,
       ),
@@ -34,9 +39,20 @@ class MyApp extends StatelessWidget {
       // home:new LayoutStack(),//层叠布局
       // home:new LayoutScroll(),//滚动布局
       // home:new AlignComponent(),//对齐控件
-      home: new WebViewComp(),
+      // home:new PaddingComp(),//Padding控件
+      // home:new SizeBoxComp(),//SizeBox控件
+      // home:new DecorateComp(),//装饰容器,为子控件绘制之前或之后绘制一个装饰效果，如渐变效果。
+      // home:new OpacityComp(),//透明度控件
+      // home:new PopupMenuComp(),//弹出式菜单控件
+      // home:new BottomNavigation(),//底部导航控件
+      // home:new CustomListView(),//列表项(有问题)
+      // home: new HttpRequestComp(),//http请求
+      // home:new PullRefreshComp(),
+      // home:new ImagePickerComp(),
+      home:new BootomSheetComp(),
     );
   }
+
 
   final List<Product> _kProducts = <Product>[
   new Product(name: '鸡蛋'),
@@ -46,6 +62,9 @@ class MyApp extends StatelessWidget {
   new Product(name: '餐巾纸'),
   new Product(name: '大米'),
 ];
+
+
+
 }
 
 

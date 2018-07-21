@@ -42,6 +42,7 @@ class ShoppingListItem extends StatelessWidget {
           width: 120.0,
           height: 90.0,
           decoration: new BoxDecoration(
+            borderRadius: BorderRadius.circular(40.0),
             color: _getColor(context),
             shape: BoxShape.rectangle,
             boxShadow: [new BoxShadow(

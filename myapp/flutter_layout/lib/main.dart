@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sticky_headers/sticky_headers.dart';
 
 void main() => runApp(new MyApp());
 
@@ -101,10 +102,8 @@ class MyApp extends StatelessWidget {
       );
     }
 
-    return MaterialApp(
-      title: 'Flutter Layout',
-      theme: new ThemeData(primaryColor: Colors.green),
-      home: Scaffold(
+    Widget homePage() {
+      return new Scaffold(
         appBar: AppBar(
           title: Text('Flutter布局实例'),
         ),
@@ -133,7 +132,37 @@ class MyApp extends StatelessWidget {
           ),
           onPressed: null,
         ),
-      ),
+      );
+    }
+
+    Widget homePage2(){
+      return new ListView.builder(
+        itemBuilder: (context, index) {
+          return new Material(
+            color: Colors.grey[300],
+            child: new StickyHeader(
+              header: new Container(
+                height: 40.0,
+                color: Colors.grey[400],
+                padding: new EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: new Text('1',style: const TextStyle(color: Colors.black),
+                ),
+              ),
+              content: new Container(
+                height: 200.0,
+                child:new Text("data"),
+              ),
+            ),
+          );
+        }
+      );
+    }
+
+    return MaterialApp(
+      title: 'Flutter Layout',
+      theme: new ThemeData(primaryColor: Colors.green),
+      home: homePage2(),
     );
   }
 }
