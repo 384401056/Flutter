@@ -8,6 +8,8 @@ import 'package:flutter_action/Lession/LayoutRowColumn.dart';
 import 'package:flutter_action/Lession/LayoutStack.dart';
 import 'package:flutter_action/Lession/LayoutScroll.dart';
 import 'package:flutter_action/Lession/AlignComponent.dart';
+import 'package:flutter_action/TestComponents/SimpleDialogComp.dart';
+import 'package:flutter_action/TestComponents/WebViewComp.dart';
 
 
 void main() => runApp(new MyApp());
@@ -18,6 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
+      // routes: {
+      //   '/':(_)=>new Text("data"),
+      // },
       theme: new ThemeData(
         primarySwatch: Colors.green,
       ),
@@ -28,10 +33,10 @@ class MyApp extends StatelessWidget {
       // home:new LayoutRowColumn(),//行列布局
       // home:new LayoutStack(),//层叠布局
       // home:new LayoutScroll(),//滚动布局
-      home:new AlignComponent(),//对齐控件
+      // home:new AlignComponent(),//对齐控件
+      home: new WebViewComp(),
     );
   }
-
 
   final List<Product> _kProducts = <Product>[
   new Product(name: '鸡蛋'),
