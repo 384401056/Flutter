@@ -9,10 +9,13 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_storage: "^1.0.0"
   image_picker: "^0.4.5"
+  flutter_webview_plugin: "^0.1.6"
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
