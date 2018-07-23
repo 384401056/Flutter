@@ -19,6 +19,7 @@ import 'package:flutter_action/Lession/HttpRequestComp.dart';
 import 'package:flutter_action/Lession/PullRefreshComp.dart';
 import 'package:flutter_action/Lession/ImagePickerComp.dart';
 import 'package:flutter_action/Lession/BottomSheetComp.dart';
+import 'package:flutter_action/Lession/CustomScrollViewComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
       // home: new HttpRequestComp(),//http请求
       // home:new PullRefreshComp(),
       // home:new ImagePickerComp(),
-      home:new BootomSheetComp(),
+      // home:new BootomSheetComp(),
+      home:new CustomScrollViewComp(),
     );
   }
 
