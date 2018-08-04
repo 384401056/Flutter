@@ -19,7 +19,7 @@ import 'package:flutter_action/Lession/HttpRequestComp.dart';
 import 'package:flutter_action/Lession/PullRefreshComp.dart';
 import 'package:flutter_action/Lession/ImagePickerComp.dart';
 import 'package:flutter_action/Lession/BottomSheetComp.dart';
-import 'package:flutter_action/Lession/ListViewSlidItem.dart';
+import 'package:flutter_action/Lession/CustomScrollViewComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
       // home:new PullRefreshComp(),
       // home:new ImagePickerComp(),
       // home:new BootomSheetComp(),
-      home:new ListViewSlidItem(),
+      home:new CustomScrollViewComp(),
     );
   }
 
@@ -64,12 +64,5 @@ class MyApp extends StatelessWidget {
   new Product(name: '餐巾纸'),
   new Product(name: '大米'),
 ];
-
-
-
 }
-
-
-
-
 

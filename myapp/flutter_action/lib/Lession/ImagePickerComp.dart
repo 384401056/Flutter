@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
-import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'dart:core';
 
@@ -77,4 +77,43 @@ class _ImagePickerCompState extends State<ImagePickerComp> {
   //               icon: new Icon(Icons.add,color: Colors.white),
   //               onPressed: getImage,),
   //           ),
+
+
+
+  // Future<RetMsg> _userAuth(String name, String pwd) async {
+  //   RetMsg ret = new RetMsg(false, '');
+  //   var url = '$Server_Oauth_URL';
+  //   Map<String, String> queryParameters = {
+  //     'grant_type': 'password',
+  //     'client_id': 'ftrace-front',
+  //     'client_secret': '1',
+  //     'username': name,
+  //     'password': pwd,
+  //   };
+  //   try {
+  //     await http.post(url,
+  //             encoding: Encoding.getByName("utf-8"),
+  //             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+  //             body: queryParameters)
+  //         .then((response) {
+  //       if (response.statusCode == HttpStatus.OK) {
+  //         print("response.body:${response.body}");
+  //         convertData(response.body);
+  //         ret.success = true;
+  //         ret.msg = "success";
+  //       } else {
+  //         print(
+  //             "Error getting IP address:\nHttp status ${response.statusCode}");
+  //         ret.success = false;
+  //         ret.msg = "用户名或密码错误.";
+  //       }
+  //     });
+  //   } catch (exception) {
+  //     print(exception);
+  //     ret.success = false;
+  //     ret.msg = "请检查网络后重试.";
+  //   }
+  //   return ret;
+  // }
+
 }
