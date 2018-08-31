@@ -18,8 +18,10 @@ import 'package:flutter_action/Lession/ListItemComp.dart';
 import 'package:flutter_action/Lession/HttpRequestComp.dart';
 import 'package:flutter_action/Lession/PullRefreshComp.dart';
 import 'package:flutter_action/Lession/ImagePickerComp.dart';
+import 'package:flutter_action/Lession/ImagePickerCropComp.dart';
 import 'package:flutter_action/Lession/BottomSheetComp.dart';
 import 'package:flutter_action/Lession/CustomScrollViewComp.dart';
+import 'package:flutter_action/Lession/FormTextFieldComp.dart';
 
 void main() => runApp(new MyApp());
 
@@ -45,13 +47,15 @@ class MyApp extends StatelessWidget {
       // home:new DecorateComp(),//装饰容器,为子控件绘制之前或之后绘制一个装饰效果，如渐变效果。
       // home:new OpacityComp(),//透明度控件
       // home:new PopupMenuComp(),//弹出式菜单控件
-      // home:new BottomNavigation(),//底部导航控件
-      // home:new CustomListView(),//列表项(有问题)
-      // home: new HttpRequestComp(),//http请求
-      // home:new PullRefreshComp(),
-      // home:new ImagePickerComp(),
-      // home:new BootomSheetComp(),
-      home:new CustomScrollViewComp(),
+      // home:new BottomNavigation(),//底部导航控件.
+      // home:new CustomListView(),//列表项(有问题).
+      // home: new HttpRequestComp(),//http请求.
+      home:new PullRefreshComp(),//下拉刷新，上拉更多.
+      // home:new ImagePickerComp(),//图片选择.
+      // home:new ImagePickerCropComp(),//图片选择.
+      // home:new BootomSheetComp(),//底部弹框.
+      // home:new CustomScrollViewComp(),//横向滚动.
+      // home: new FormTextFieldComp(),
     );
   }
 
@@ -68,8 +72,4 @@ class MyApp extends StatelessWidget {
 
 
 }
-
-
-
-
 

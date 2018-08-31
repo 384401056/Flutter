@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
-import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:core';
 
@@ -67,6 +67,8 @@ class _ImagePickerCompState extends State<ImagePickerComp> {
       ),
     );
   }
+
+
 
   // List<Widget> listImage() {}
   //  new Container(
